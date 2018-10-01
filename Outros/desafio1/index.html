@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello World</p>
+    <button name='evento' onclick="minhaFuncao()">Clique aqui</button>
+
+
+    <script>
+        // console.log(document.getElementsByTagName('p')[0]);
+        function minhaFuncao() {
+            var paragrafo = document.getElementsByTagName('p')[0];
+            paragrafo.textContent = 'Olá Mundo';
+            paragrafo.style.color = 'pink';
+            paragrafo.style.fontSize = '5rem';
+        }
+    </script>
+</body>
+</html>

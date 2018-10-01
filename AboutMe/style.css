@@ -1,0 +1,54 @@
+/* * {
+    padding: 0px;
+    margin: 0px;
+} */
+
+
+
+/* Mobile View */
+.name_desktop {
+    display: none;
+}
+
+.name_mobile {
+    color: white;
+    margin-top: -50px;
+    text-align: center;
+}
+
+.photo {
+    width: 100vw;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Desktop View */
+
+@media (min-width: 600px) {
+
+    .photo {
+        width: 50vw;
+    }
+
+    .name_mobile {
+        display: none;
+    }
+    .name_desktop {
+        display: block;
+    }
+
+    .information {
+        display: inline-block;
+        flex-direction: column;
+        vertical-align: top;
+        margin-left: 20px;
+        margin-top: 100px;
+    }
+}
+
+
+
+

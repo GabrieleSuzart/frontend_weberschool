@@ -1,0 +1,30 @@
+.colunas {
+    display: flex;
+    height: 60vh;
+    align-items: flex-end;
+}
+
+.coluna {
+    flex-grow: 1;
+    border: 1px solid red;
+}
+
+.coluna:nth-child(1) {
+    height: 10%;
+}
+
+.coluna:nth-child(2) {
+    height: 20%;
+}
+
+.coluna:nth-child(3) {
+    height: 50%;
+}
+
+.coluna:nth-child(4) {
+    height: 100%;
+}
+
+.coluna:nth-child(5) {
+    height: 70%;
+}

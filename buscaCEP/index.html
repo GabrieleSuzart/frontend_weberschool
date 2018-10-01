@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="..\font-awesome\css\font-awesome.min.css">
+    <title>Buscar CEP</title>
+</head>
+<body>
+    <input onkeypress="minhaRequisicao()" type="text" id="cep" placeholder="Digite o CEP">
+    <button onclick="minhaRequisicao()"><i class="fa fa-search" aria-hidden="true"></i> Buscar</button>
+    <p id="semResultado">Não há resultado para exibir.</p>
+    <p ></p>
+
+
+    <script>
+        function minhaRequisicao(){
+            if (event.which == 13 || event.keyCode == 13 || event.target.nodeName == 'BUTTON') {
+                var xhr = new XMLHttpRequest();
+                var inputCep = document.querySelector('#cep').value;
+                xhr.open('GET', 'http://api.postmon.com.br/v1/cep/' + inputCep);
+                xhr.onload = atualizarResultado;
+                xhr.onerror = cepInvalido;
+                xhr.responseType = 'json';
+                if(inputCep === ''){
+                    return;
+                }
+                xhr.send();
+            }
+        }
+        function atualizarResultado() {
+            var data = this.response;
+            var resultado = document.querySelector('#semResultado');
+            resultado.textContent = 'Endereço: ' + data.logradouro + ', ' + data.bairro + ', ' + data.cidade + ' - ' + data.estado;
+        }
+        function cepInvalido(){
+            var resultado = document.querySelector('#semResultado');
+            resultado.textContent = 'CEP inválido!';
+        }
+    </script>
+</body>
+</html>

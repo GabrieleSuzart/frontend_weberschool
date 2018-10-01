@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    min-width: 280px;
+    color: #636464
+}
+
+.logo a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.menu-icon{
+    display: flex;
+    color: white;
+    font-size: 22px;
+
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #01affa;
+    height: 60px;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* width: 100vw; */
+}
+
+.navigation-mobile{
+    background-color: #333333;
+    max-height: 0;
+    overflow: hidden; /*serve para esconder o conteudo de um container quando o mesmo não cabe*/
+    transition: all 1.2s ease; /*só funciona quando tem tamanho númerico*/
+    /* width: 100vw; */
+}
+
+.navigation-mobile ul{
+    padding: 20px;
+    color: white;
+    list-style: none;
+
+}
+
+.navigation-mobile li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 0.8;
+
+}
+
+.header{
+    background-color: #01affa;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* width: 100vw; */
+}
+
+.info-title{
+    font-size: 3rem;
+}
+
+.info-description{
+    font-size: 1.2rem;
+    margin-top: 24px;
+    margin-bottom: 16px; 
+}
+
+.app-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+.app-icon{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 30px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.fa{
+    margin-right: 5px;
+    font-size: inherit;
+}
+
+.menuFechado {
+    max-height: 100vh;
+}
+
+.imagem {
+    background-image: url(../img/background-header.jpg);
+    background-size: cover;
+}
+
+.imagem img {
+    width: 100%
+}
+
+#vantagens {
+    text-align: center;
+}

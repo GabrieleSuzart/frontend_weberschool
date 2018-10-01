@@ -1,0 +1,20 @@
+.vantagens-item {
+    display: flex;
+}
+
+.vantagens-icon{
+    color: #01affa;
+    font-size: 60px;
+    min-width: 100px;
+}
+
+
+.vantagens-info h4{
+    color: #01affa;
+}
+
+.vantagens-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
